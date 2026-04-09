@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://b1blhpohafy5l"]
+
+[ext_resource type="Script" uid="uid://dh8kj6bsipxxo" path="res://inimigo_2.gd" id="1_4mur0"]
+[ext_resource type="AudioStream" uid="uid://b2xtruy7byn6o" path="res://sons/Dramatic Heartbeat Sound Effect [9zw6eZEBp30].mp3" id="2_4mur0"]
+[ext_resource type="Texture2D" uid="uid://cqqp2pg5g62dr" path="res://cerberus.png" id="2_yguip"]
+[ext_resource type="AudioStream" uid="uid://cjpu0135uwtw4" path="res://sons/hell.mp3" id="3_yguip"]
+[ext_resource type="AudioStream" uid="uid://dywpgqqsq3mn4" path="res://sons/loucura.mp3" id="4_f134l"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kkofb"]
+radius = 16.03122
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p6opy"]
+radius = 17.117243
+
+[node name="inimigo2" type="CharacterBody2D" unique_id=1190344765]
+scale = Vector2(1.25, 1.25)
+script = ExtResource("1_4mur0")
+
+[node name="KurtCobaia" type="Sprite2D" parent="." unique_id=1932955615]
+modulate = Color(5.4283295, 3.5971408, 3.5711122, 1)
+position = Vector2(1.335144e-06, -1.1999967)
+scale = Vector2(0.059375, 0.058593746)
+texture = ExtResource("2_yguip")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1334971114]
+shape = SubResource("CircleShape2D_kkofb")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=303950519]
+
+[node name="Timer" type="Timer" parent="." unique_id=246271142]
+wait_time = 0.8
+autostart = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=824680692]
+stream = ExtResource("2_4mur0")
+volume_db = 5.143
+pitch_scale = 1.21
+autoplay = true
+max_distance = 625.0
+attenuation = 0.93303394
+parameters/looping = true
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="." unique_id=1547652892]
+stream = ExtResource("3_yguip")
+volume_db = 3.722
+pitch_scale = 2.32
+autoplay = true
+max_distance = 477.0
+parameters/looping = true
+
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="." unique_id=1562462869]
+stream = ExtResource("4_f134l")
+volume_db = 3.84
+pitch_scale = 1.68
+autoplay = true
+max_distance = 478.0
+parameters/looping = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=44818358]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1870320169]
+shape = SubResource("CircleShape2D_p6opy")
+debug_color = Color(0.978336, 0, 0.397004, 0.42)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

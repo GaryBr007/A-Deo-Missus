@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://bsdgchx8hq815"]
+
+[ext_resource type="Script" uid="uid://buiuhrfyquohw" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="AudioStream" uid="uid://cq5dxxs557dtw" path="res://sons/Ambiente.mp3" id="2_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://blw1jreudwklf" path="res://IMG-20251108-WA0007.png" id="3_hqtel"]
+[ext_resource type="PackedScene" uid="uid://d0lvbf5ayiorw" path="res://speedrun.tscn" id="4_hqtel"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hqtel"]
+radius = 41.0
+height = 116.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sweqy"]
+radius = 39.67857
+height = 107.9666
+
+[node name="player" type="CharacterBody2D" unique_id=1520826951]
+rotation = 0.009509277
+scale = Vector2(0.7, 0.56)
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_onrkg")
+musica_ambiente = ExtResource("2_i3pqv")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1975606627]
+visible = false
+position = Vector2(1, 0)
+shape = SubResource("CapsuleShape2D_hqtel")
+debug_color = Color(0.852554, 0.303196, 0.551431, 0.42)
+
+[node name="Ambiente" type="AudioStreamPlayer" parent="." unique_id=468962791]
+volume_db = -6.703
+autoplay = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=503105748]
+modulate = Color(0.7666196, 0.7666196, 0.76661915, 1)
+texture_filter = 2
+position = Vector2(7.19009, 7.81625)
+rotation = -1.58642
+scale = Vector2(0.323669, 0.273204)
+texture = ExtResource("3_hqtel")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2074041862]
+position = Vector2(0.00012207, 0)
+scale = Vector2(-12662.1, 250.661)
+zoom = Vector2(2, 2)
+
+[node name="player" type="Area2D" parent="." unique_id=973145567]
+visible = false
+scale = Vector2(1.12, 1.12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=1375686241]
+position = Vector2(0.5, -0.411871)
+shape = SubResource("CapsuleShape2D_sweqy")
+debug_color = Color(0.852554, 0.303196, 0.551431, 0.42)
+
+[node name="Footsteps" type="AudioStreamPlayer2D" parent="." unique_id=1763594405]
+volume_db = -6.9
+pitch_scale = 1.47
+
+[node name="speedruntimer" parent="." unique_id=1844730489 instance=ExtResource("4_hqtel")]
+layer = 2
+
+[connection signal="body_entered" from="player" to="." method="_on_player_body_entered"]

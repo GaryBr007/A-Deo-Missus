@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://bfkodsmd8xdct"]
+
+[ext_resource type="Script" uid="uid://dkbqv2tke10a0" path="res://creditos.gd" id="1_7flbs"]
+[ext_resource type="Texture2D" uid="uid://ii1mmjwe7pu2" path="res://pngfind.com-gfx-png-2552685.png" id="1_ilafw"]
+
+[node name="Creditos" type="Node2D" unique_id=1694405426]
+script = ExtResource("1_7flbs")
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1555622774]
+offset_left = 64.0
+offset_right = 1213.0
+offset_bottom = 645.0
+color = Color(0.147672, 0.147672, 0.147672, 1)
+
+[node name="Pngfind_com-gfx-png-2552697" type="Sprite2D" parent="." unique_id=345363856]
+modulate = Color(0.737193, 0.7371929, 0.7371929, 1)
+position = Vector2(575.50024, 325.5)
+scale = Vector2(1.017684, 0.912305)
+texture = ExtResource("1_ilafw")
+
+[node name="Pngfind_com-gfx-png-2552698" type="Sprite2D" parent="." unique_id=1504735087]
+modulate = Color(0.737193, 0.7371929, 0.7371929, 1)
+position = Vector2(579.5002, 322.7501)
+scale = Vector2(1.0247571, 0.9200846)
+texture = ExtResource("1_ilafw")
+
+[node name="Pngfind_com-gfx-png-2552703" type="Sprite2D" parent="." unique_id=440491561]
+modulate = Color(0.737193, 0.7371929, 0.7371929, 1)
+position = Vector2(616, 320)
+scale = Vector2(1.0168, 0.912305)
+texture = ExtResource("1_ilafw")
+
+[node name="Pngfind_com-gfx-png-2552704" type="Sprite2D" parent="." unique_id=507178094]
+modulate = Color(0.737193, 0.7371929, 0.7371929, 1)
+position = Vector2(632, 320)
+scale = Vector2(1.0168, 0.912305)
+texture = ExtResource("1_ilafw")
+
+[node name="Pngfind_com-gfx-png-2552705" type="Sprite2D" parent="." unique_id=598196632]
+modulate = Color(0.737193, 0.7371929, 0.7371929, 1)
+position = Vector2(664, 320)
+scale = Vector2(1.0168, 0.912305)
+texture = ExtResource("1_ilafw")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=1144848167]
+offset_left = 64.0
+offset_top = 120.0
+offset_right = 1088.0
+offset_bottom = 638.0
+theme_override_colors/default_color = Color(0.9384497, 0.9384497, 0.9384497, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/normal_font_size = 27
+text = "Ícaro Ray Ernandes - Programador, designer e produtor de efeitos sonoros, game designer, level designer e codiretor criativo.
+
+Antônio Janderson - Design visual e de personagens
+
+Maria Júlia  - Direção de arte, design visual e de personagens
+
+Renan Lima Araújo - Diretor criativo
+
+Ana Katharina - Processo criativo, administração
+
+Mauricio Damasceno - Produtor de música e sons, Processo criativo
+
+Jefferson Davi - Auxilio no design do menu"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="." unique_id=168272851]
+offset_left = 448.0
+offset_top = 48.0
+offset_right = 704.0
+offset_bottom = 186.0
+theme_override_colors/default_color = Color(0.9384497, 0.9384497, 0.9384497, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/normal_font_size = 50
+text = "CRÉDITOS"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="exitcj" type="Button" parent="." unique_id=1461724980]
+offset_left = 20.0
+offset_top = 16.0
+offset_right = 230.0
+offset_bottom = 71.0
+scale = Vector2(0.952002, 1)
+theme_override_colors/font_color = Color(0.9209942, 0.92099476, 0.9209944, 1)
+theme_override_colors/font_hover_color = Color(0.42749283, 0.42749298, 0.42749396, 1)
+theme_override_font_sizes/font_size = 34
+text = "MENU PRINCIPAL"
+flat = true
+
+[connection signal="pressed" from="exitcj" to="." method="_on_exitcj_pressed"]

@@ -1,0 +1,198 @@
+[gd_scene format=3 uid="uid://caagi8vviwewr"]
+
+[ext_resource type="Script" uid="uid://ctydeei216wso" path="res://tela_menu.gd" id="1_3wnar"]
+[ext_resource type="AudioStream" uid="uid://cdd36828dalkj" path="res://sons/menusom.mp3" id="2_irlws"]
+[ext_resource type="Texture2D" uid="uid://clmvptm7hys8g" path="res://logodeomissus-removebg-preview.png" id="3_3b2dc"]
+[ext_resource type="Texture2D" uid="uid://d1ar1ke10hla7" path="res://Free Vignette Overlay 24.png" id="3_irlws"]
+[ext_resource type="Texture2D" uid="uid://ccd6et822v1ki" path="res://botaoplay.png" id="4_irlws"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_irlws"]
+lifetime_randomness = 0.75
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(800, 500, 1)
+direction = Vector3(1, 1, 0)
+initial_velocity_min = 150.0
+initial_velocity_max = 150.0
+gravity = Vector3(0, 0, 0)
+scale_min = 3.0
+scale_max = 3.0
+color = Color(0.50412965, 0.50787956, 0.49063504, 1)
+turbulence_noise_strength = 7.67
+turbulence_noise_scale = 8.615
+
+[sub_resource type="Animation" id="Animation_3b2dc"]
+resource_name = "FadeIn"
+length = 4.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_irlws"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_82pe7"]
+_data = {
+&"FadeIn": SubResource("Animation_3b2dc"),
+&"RESET": SubResource("Animation_irlws")
+}
+
+[node name="Tela menu" type="Node2D" unique_id=492189057]
+script = ExtResource("1_3wnar")
+
+[node name="SomMenu" type="AudioStreamPlayer" parent="." unique_id=889886605]
+stream = ExtResource("2_irlws")
+volume_db = -15.162
+pitch_scale = 1.41
+autoplay = true
+parameters/looping = true
+
+[node name="SomMenu2" type="AudioStreamPlayer" parent="." unique_id=87866399]
+stream = ExtResource("2_irlws")
+volume_db = -10.736
+pitch_scale = 0.82
+autoplay = true
+parameters/looping = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1894572312]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.147672, 0.147672, 0.147672, 1)
+
+[node name="Pngfind_com-gfx-png-2552702" type="Sprite2D" parent="." unique_id=219806030]
+modulate = Color(0.47007585, 0.47007585, 0.47007585, 1)
+position = Vector2(576, 324)
+scale = Vector2(1.2800001, 1.08)
+texture = ExtResource("3_irlws")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=833256642]
+modulate = Color(1, 1, 1, 0.7411765)
+position = Vector2(546, 280)
+amount = 64
+lifetime = 3.0
+speed_scale = 1.33
+randomness = 0.44
+fixed_fps = 75
+process_material = SubResource("ParticleProcessMaterial_irlws")
+
+[node name="LogodeomissusRemovebgPreview" type="Sprite2D" parent="." unique_id=1063583086]
+position = Vector2(560, 191.99995)
+scale = Vector2(1.0000005, 0.99999577)
+texture = ExtResource("3_3b2dc")
+
+[node name="Botaoplay" type="Sprite2D" parent="." unique_id=500102086]
+position = Vector2(568, 418)
+scale = Vector2(0.22, 0.2225)
+texture = ExtResource("4_irlws")
+
+[node name="Botaoplay2" type="Sprite2D" parent="." unique_id=1050738056]
+position = Vector2(568, 514)
+scale = Vector2(0.22, 0.2225)
+texture = ExtResource("4_irlws")
+
+[node name="Botaoplay3" type="Sprite2D" parent="." unique_id=1633243861]
+position = Vector2(568, 610)
+scale = Vector2(0.22, 0.2225)
+texture = ExtResource("4_irlws")
+
+[node name="Play" type="Button" parent="." unique_id=1448159990]
+offset_left = 472.00003
+offset_top = 360.0
+offset_right = 690.48706
+offset_bottom = 404.0
+scale = Vector2(0.952002, 1)
+theme_override_colors/font_color = Color(0.9784388, 0.97843796, 0.97305936, 1)
+theme_override_colors/font_hover_color = Color(0.42365032, 0.42365074, 0.42365053, 1)
+theme_override_constants/outline_size = 2
+theme_override_constants/icon_max_width = 0
+theme_override_font_sizes/font_size = 26
+text = "JOGAR"
+flat = true
+
+[node name="comojoga" type="Button" parent="." unique_id=157706820]
+offset_left = 456.00003
+offset_top = 456.0
+offset_right = 708.10034
+offset_bottom = 503.0
+scale = Vector2(0.952002, 1)
+theme_override_colors/font_color = Color(0.9784388, 0.97843796, 0.97305936, 1)
+theme_override_colors/font_hover_color = Color(0.42365032, 0.42365074, 0.42365053, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 26
+text = "TUTORIAL"
+flat = true
+
+[node name="credits" type="Button" parent="." unique_id=508651393]
+offset_left = 472.00003
+offset_top = 552.0
+offset_right = 690.48694
+offset_bottom = 596.0
+scale = Vector2(0.952002, 1)
+theme_override_colors/font_color = Color(0.9784388, 0.97843796, 0.97305936, 1)
+theme_override_colors/font_hover_color = Color(0.42365032, 0.42365074, 0.42365053, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 26
+text = "CRÉDITOS"
+flat = true
+
+[node name="exit" type="Button" parent="." unique_id=787530043]
+offset_left = -55.99997
+offset_top = 8.0
+offset_right = 196.00003
+offset_bottom = 63.0
+scale = Vector2(0.952002, 1)
+theme_override_colors/font_color = Color(0.9784388, 0.97843796, 0.97305936, 1)
+theme_override_colors/font_hover_color = Color(0.42365032, 0.42365074, 0.42365053, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 34
+text = "SAIR
+"
+flat = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1965624365]
+offset_left = 296.0
+offset_top = 232.0
+offset_right = 856.0
+offset_bottom = 342.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 80
+theme_override_font_sizes/bold_italics_font_size = 1
+text = "A DEO MISSUS"
+fit_content = true
+scroll_active = false
+
+[node name="Fadein" type="ColorRect" parent="." unique_id=580289821]
+offset_right = 1168.0
+offset_bottom = 688.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1994868174]
+root_node = NodePath("../Fadein")
+libraries/ = SubResource("AnimationLibrary_82pe7")
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="comojoga" to="." method="_on_comojoga_pressed"]
+[connection signal="pressed" from="credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]

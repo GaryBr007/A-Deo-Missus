@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b2xtruy7byn6o"
+path="res://.godot/imported/Dramatic Heartbeat Sound Effect [9zw6eZEBp30].mp3-95414171bf0914d01f35303cfd439241.mp3str"
+
+[deps]
+
+source_file="res://sons/Dramatic Heartbeat Sound Effect [9zw6eZEBp30].mp3"
+dest_files=["res://.godot/imported/Dramatic Heartbeat Sound Effect [9zw6eZEBp30].mp3-95414171bf0914d01f35303cfd439241.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
