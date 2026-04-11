@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b4g2tt618qbr2"]
+
+[ext_resource type="Texture2D" uid="uid://d1ar1ke10hla7" path="res://assets/Free Vignette Overlay 24.png" id="1_1h4jf"]
+
+[node name="Hudmenos" type="CanvasLayer" unique_id=1324315650]
+
+[node name="background11" type="Sprite2D" parent="." unique_id=889393894]
+modulate = Color(0.5372549, 0.5372549, 0.5372549, 0.4509804)
+position = Vector2(575.9999, 324.00003)
+scale = Vector2(1.5644444, 1.266)
+texture = ExtResource("1_1h4jf")

@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://0fd4s6knnygg"]
+
+[ext_resource type="Script" uid="uid://0570ek6vdtpi" path="res://scripts/cenas/ganhou.gd" id="1_0drl2"]
+[ext_resource type="Texture2D" uid="uid://d1ar1ke10hla7" path="res://assets/Free Vignette Overlay 24.png" id="2_jevh4"]
+[ext_resource type="PackedScene" uid="uid://d0lvbf5ayiorw" path="res://cenas/misc/speedrun.tscn" id="3_jevh4"]
+
+[node name="Node2D" type="Node2D" unique_id=1277876468]
+script = ExtResource("1_0drl2")
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=1561055377]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.147672, 0.147672, 0.147672, 1)
+
+[node name="Pngfind_com-gfx-png-2552708" type="Sprite2D" parent="." unique_id=1397730845]
+modulate = Color(0.34407577, 0.34407574, 0.34407574, 1)
+position = Vector2(576, 324.00003)
+scale = Vector2(1.28, 1.08)
+texture = ExtResource("2_jevh4")
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="." unique_id=623507781]
+offset_left = 224.0
+offset_top = 176.0
+offset_right = 936.0
+offset_bottom = 464.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 70
+text = "Continua...
+Obrigado por jogar!
+"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="exitcj" type="Button" parent="." unique_id=317505176]
+offset_left = 336.00003
+offset_top = 424.0
+offset_right = 840.2007
+offset_bottom = 479.0
+scale = Vector2(0.952002, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.4198129, 0.41981322, 0.4198131, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 34
+text = "VOLTAR AO MENU PRINCIAL"
+flat = true
+
+[node name="SeuTempo" type="Label" parent="." unique_id=1044801351]
+offset_left = 904.0
+offset_top = 608.0
+offset_right = 1080.0
+offset_bottom = 650.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Seu tempo:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="speedruntimer" parent="." unique_id=1844730489 instance=ExtResource("3_jevh4")]
+
+[connection signal="pressed" from="exitcj" to="." method="_on_exitcj_pressed"]
