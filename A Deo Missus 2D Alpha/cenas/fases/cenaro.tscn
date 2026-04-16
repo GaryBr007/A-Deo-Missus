@@ -163,7 +163,7 @@ texture = ExtResource("7_ly7y2")
 
 [node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="Cruxifixo" unique_id=2142678288]
 stream = ExtResource("8_ly7y2")
-volume_db = 0.571
+volume_db = 4.7
 pitch_scale = 1.02
 autoplay = true
 max_distance = 580.0
@@ -208,7 +208,7 @@ texture = ExtResource("12_80not")
 
 [node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="Terco" unique_id=495963831]
 stream = ExtResource("8_ly7y2")
-volume_db = -1.019
+volume_db = 4.7
 pitch_scale = 1.02
 autoplay = true
 max_distance = 580.0
