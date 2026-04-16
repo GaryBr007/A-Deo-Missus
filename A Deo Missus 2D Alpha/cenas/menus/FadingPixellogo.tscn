@@ -48,7 +48,7 @@ offset_left = -6.0
 offset_top = -5.0
 offset_right = 1164.0
 offset_bottom = 657.0
-color = Color(0.047058824, 0.011764706, 0.023529412, 1)
+color = Color(0.019607844, 0.019607844, 0.019607844, 1)
 
 [node name="Fplogo" type="Sprite2D" parent="." unique_id=944457980]
 position = Vector2(576, 319.99997)

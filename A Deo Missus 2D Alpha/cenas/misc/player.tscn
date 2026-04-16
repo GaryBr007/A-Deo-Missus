@@ -45,7 +45,6 @@ scale = Vector2(-12662.1, 250.661)
 zoom = Vector2(2, 2)
 
 [node name="player" type="Area2D" parent="." unique_id=973145567]
-visible = false
 scale = Vector2(1.12, 1.12)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=1375686241]
