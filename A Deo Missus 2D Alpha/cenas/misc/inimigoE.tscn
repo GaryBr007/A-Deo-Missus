@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://ta8ut5cgy4ea"]
+
+[ext_resource type="Texture2D" uid="uid://chgss8pttitlr" path="res://assets/kurt_cobain_paphotos_L40609-1-1.jpg" id="1_sunpm"]
+[ext_resource type="AudioStream" uid="uid://b2xtruy7byn6o" path="res://sons/Dramatic Heartbeat Sound Effect [9zw6eZEBp30].mp3" id="2_nlbe5"]
+[ext_resource type="AudioStream" uid="uid://cjpu0135uwtw4" path="res://sons/hell.mp3" id="3_cvjio"]
+[ext_resource type="AudioStream" uid="uid://dywpgqqsq3mn4" path="res://sons/loucura.mp3" id="4_d0pgt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bcg56"]
+radius = 16.03122
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wa2uj"]
+radius = 17.117243
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=730290350]
+
+[node name="KurtCobaia" type="Sprite2D" parent="." unique_id=530278389]
+modulate = Color(5.4283295, 3.5971408, 3.5711122, 1)
+position = Vector2(1.0728836e-06, 3.427267e-07)
+scale = Vector2(0.07881773, 0.053333335)
+texture = ExtResource("1_sunpm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=372553494]
+shape = SubResource("CircleShape2D_bcg56")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1899205685]
+
+[node name="Timer" type="Timer" parent="." unique_id=1985451377]
+wait_time = 0.8
+autostart = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=103921898]
+stream = ExtResource("2_nlbe5")
+volume_db = 5.143
+pitch_scale = 1.21
+autoplay = true
+max_distance = 625.0
+attenuation = 0.93303394
+parameters/looping = true
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="." unique_id=1768560432]
+stream = ExtResource("3_cvjio")
+volume_db = 3.722
+pitch_scale = 2.32
+autoplay = true
+max_distance = 477.0
+parameters/looping = true
+
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="." unique_id=598130011]
+stream = ExtResource("4_d0pgt")
+volume_db = 3.84
+pitch_scale = 1.68
+autoplay = true
+max_distance = 478.0
+parameters/looping = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1483342577]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=411437027]
+shape = SubResource("CircleShape2D_wa2uj")
+debug_color = Color(0.978336, 0, 0.397004, 0.42)
