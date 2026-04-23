@@ -11,7 +11,7 @@ radius = 16.03122
 [sub_resource type="CircleShape2D" id="CircleShape2D_wa2uj"]
 radius = 17.117243
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=730290350]
+[node name="inimigoE" type="CharacterBody2D" unique_id=730290350]
 
 [node name="KurtCobaia" type="Sprite2D" parent="." unique_id=530278389]
 modulate = Color(5.4283295, 3.5971408, 3.5711122, 1)
