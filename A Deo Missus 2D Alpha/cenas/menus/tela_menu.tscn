@@ -182,7 +182,20 @@ text = "A DEO MISSUS"
 fit_content = true
 scroll_active = false
 
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=440789288]
+offset_left = 744.0
+offset_top = 456.0
+offset_right = 976.0
+offset_bottom = 502.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 33
+theme_override_font_sizes/bold_italics_font_size = 1
+text = "Recomendado"
+fit_content = true
+scroll_active = false
+
 [node name="Fadein" type="ColorRect" parent="." unique_id=580289821]
+visible = false
 offset_right = 1168.0
 offset_bottom = 688.0
 mouse_filter = 2
