@@ -5,4 +5,5 @@ func _ready() -> void:
 	$AnimationPlayer.play("FadeIn")
 
 func _on_exitcj_pressed() -> void:
+	Global.tutorial = true
 	get_tree().change_scene_to_file("res://cenas/menus/tela_menu.tscn")

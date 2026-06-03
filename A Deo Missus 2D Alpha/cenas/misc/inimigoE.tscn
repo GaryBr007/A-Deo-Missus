@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://djwmbw2gv6xto" path="res://cenas/misc/inimigo_e.gd" id="1_nlbe5"]
 [ext_resource type="Texture2D" uid="uid://chgss8pttitlr" path="res://assets/kurt_cobain_paphotos_L40609-1-1.jpg" id="1_sunpm"]
-[ext_resource type="AudioStream" uid="uid://b2xtruy7byn6o" path="res://sons/Dramatic Heartbeat Sound Effect [9zw6eZEBp30].mp3" id="2_nlbe5"]
+[ext_resource type="AudioStream" uid="uid://hv3btl1m88f6" path="res://sons/Kurt.mp3" id="3_wbird"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bcg56"]
 radius = 16.03122
@@ -29,8 +29,8 @@ wait_time = 0.8
 autostart = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=103921898]
-stream = ExtResource("2_nlbe5")
-volume_db = 5.143
+stream = ExtResource("3_wbird")
+volume_db = -2.633
 autoplay = true
 max_distance = 246.0
 attenuation = 0.93303394

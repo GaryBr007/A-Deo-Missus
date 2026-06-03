@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ta8ut5cgy4ea" path="res://cenas/misc/inimigoE.tscn" id="7_3pooc"]
 [ext_resource type="AudioStream" uid="uid://ddjoiaigua2y1" path="res://sons/Spawn.mp3" id="8_dnwje"]
 [ext_resource type="Script" uid="uid://cqh4qphv3cwt3" path="res://scripts/misc/microfone.gd" id="9_kivau"]
-[ext_resource type="Texture2D" uid="uid://bvt6cldwhctwo" path="res://assets/holybible.png" id="10_j5p0t"]
+[ext_resource type="Texture2D" uid="uid://bymdcfvl81ql" path="res://assets/BolaAmarela.png" id="10_kivau"]
 [ext_resource type="AudioStream" uid="uid://5p67tmimvvtm" path="res://sons/Grab.mp3" id="12_j5p0t"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_bhm4t"]
@@ -172,7 +172,8 @@ volume_db = -33.958
 pitch_scale = 0.96
 
 [node name="Biblia" type="Area2D" parent="." unique_id=1526211273]
-position = Vector2(768, 304)
+position = Vector2(768, 264)
+scale = Vector2(0.5, 0.5)
 collision_mask = 3
 script = ExtResource("9_kivau")
 
@@ -182,8 +183,7 @@ shape = SubResource("RectangleShape2D_rg7bt")
 
 [node name="Sprite2D" type="Sprite2D" parent="Biblia" unique_id=1032794587]
 position = Vector2(0, -0.99993896)
-scale = Vector2(0.07291665, 0.09142844)
-texture = ExtResource("10_j5p0t")
+texture = ExtResource("10_kivau")
 
 [node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="Biblia" unique_id=759591684]
 volume_db = 4.759
@@ -192,7 +192,6 @@ autoplay = true
 max_distance = 580.0
 
 [node name="Fadein" type="ColorRect" parent="." unique_id=1152024669]
-visible = false
 z_index = 4
 offset_left = -1712.0
 offset_top = -912.0
