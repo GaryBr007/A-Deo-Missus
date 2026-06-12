@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://c1mbjatjcm6y8" path="res://scripts/cenas/comojoga.gd" id="2_jt4bk"]
 [ext_resource type="PackedScene" uid="uid://bsdgchx8hq815" path="res://cenas/misc/player.tscn" id="2_mc35u"]
-[ext_resource type="AudioStream" uid="uid://deaqujshbxv53" path="res://sons/footsteps.mp3" id="4_ke0is"]
 [ext_resource type="Texture2D" uid="uid://c113j2jilatkj" path="res://assets/chao1.png" id="5_d25u2"]
 [ext_resource type="Script" uid="uid://cquwxsm4wukg7" path="res://cenas/menus/tut_spawn.gd" id="5_rg7bt"]
 [ext_resource type="PackedScene" uid="uid://ta8ut5cgy4ea" path="res://cenas/misc/inimigoE.tscn" id="7_3pooc"]
@@ -224,7 +223,6 @@ justification_flags = 162
 position = Vector2(320, 359.99994)
 scale = Vector2(0.36, 0.36)
 musica_ambiente = null
-footsteps = ExtResource("4_ke0is")
 
 [node name="TutSpawn" type="Marker2D" parent="." unique_id=1011774156 node_paths=PackedStringArray("Player")]
 position = Vector2(864, 95)
@@ -262,10 +260,10 @@ attenuation = 2.0705304
 
 [node name="Fadein" type="ColorRect" parent="." unique_id=1152024669]
 z_index = 4
-offset_left = -1712.0
-offset_top = -912.0
-offset_right = 2986.0
-offset_bottom = 2435.0
+offset_left = -480.0
+offset_top = -264.0
+offset_right = 1824.0
+offset_bottom = 1328.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
@@ -285,6 +283,7 @@ position = Vector2(864, 228)
 shape = SubResource("RectangleShape2D_j5p0t")
 
 [node name="PortalTutorial" type="Area2D" parent="." unique_id=2110610288 groups=["Player"]]
+visible = false
 position = Vector2(1216, 288)
 collision_layer = 2
 collision_mask = 3
@@ -318,6 +317,7 @@ fixed_fps = 60
 process_material = SubResource("ParticleProcessMaterial_nyc08")
 
 [node name="MenuPrincipal" type="RichTextLabel" parent="." unique_id=1034868973]
+visible = false
 offset_left = 1160.0
 offset_top = 200.0
 offset_right = 1630.2759
