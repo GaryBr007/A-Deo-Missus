@@ -50,6 +50,30 @@ size = Vector2(26, 32)
 [sub_resource type="CircleShape2D" id="CircleShape2D_ttibt"]
 radius = 40.0
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_l2kbi"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(100, 100, 100)
+emission_shape = 1
+emission_sphere_radius = 1.0
+angle_min = -720.0
+angle_max = 720.0
+spread = 180.0
+flatness = 1.0
+initial_velocity_min = 493.87
+initial_velocity_max = 493.87
+gravity = Vector3(0, 0, 0)
+scale_min = 0.19999999
+scale_max = 1.1999999
+color = Color(0.7397895, 2.0094587e-06, 5.7756904e-07, 1)
+hue_variation_min = -0.050000023
+hue_variation_max = 0.049999975
+turbulence_enabled = true
+turbulence_noise_strength = 20.0
+turbulence_noise_scale = 7.802
+turbulence_noise_speed_random = 0.0
+turbulence_influence_min = 0.035
+turbulence_influence_max = 0.284
+
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_n2af5"]
 particle_flag_disable_z = true
 emission_shape = 3
@@ -143,7 +167,6 @@ volume_db = -10.722
 pitch_scale = 0.97
 
 [node name="Entrada" type="Area2D" parent="." unique_id=145026841 groups=["Player"]]
-visible = false
 position = Vector2(3270, 329)
 collision_layer = 2
 collision_mask = 3
@@ -153,12 +176,11 @@ script = ExtResource("7_wm0xn")
 
 [node name="Portal" type="Sprite2D" parent="Entrada" unique_id=1781546325]
 modulate = Color(0.43529412, 0.02745098, 0.007843138, 0.8627451)
-position = Vector2(1.0001211, 13.999987)
+position = Vector2(0, 1.9999999)
 scale = Vector2(0.3657148, 0.38857144)
 texture = ExtResource("9_n2af5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Entrada" unique_id=1831575208]
-position = Vector2(1, 11)
 shape = SubResource("CircleShape2D_ttibt")
 
 [node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="Entrada" unique_id=1379903264]
@@ -169,6 +191,14 @@ autoplay = true
 max_distance = 666.0
 attenuation = 2.1435473
 parameters/looping = true
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Entrada" unique_id=1933045356]
+scale = Vector2(0.5095506, 0.49698278)
+amount = 40
+lifetime = 0.54
+randomness = 0.18
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_l2kbi")
 
 [node name="Hudmenos" parent="." unique_id=1324315650 instance=ExtResource("9_c0yme")]
 layer = 0

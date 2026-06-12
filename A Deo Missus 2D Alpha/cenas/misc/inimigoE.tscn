@@ -30,10 +30,10 @@ autostart = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=103921898]
 stream = ExtResource("3_wbird")
-volume_db = -2.633
+volume_db = -10.409
 autoplay = true
-max_distance = 246.0
-attenuation = 0.93303394
+max_distance = 311.0
+attenuation = 1.7411019
 parameters/looping = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1483342577]

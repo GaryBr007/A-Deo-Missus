@@ -1,0 +1,12 @@
+extends Area2D
+
+func _process(_delta: float) -> void:
+	if len(Global.itenstut) >= 1:
+		visible = true
+		monitoring = true
+		monitorable = true
+		
+func _on_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Player"):
+		Global.tutorial = true
+		get_tree().change_scene_to_file("res://cenas/menus/tela_menu.tscn")
