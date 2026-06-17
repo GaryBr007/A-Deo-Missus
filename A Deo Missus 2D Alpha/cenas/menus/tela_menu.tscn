@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://clmvptm7hys8g" path="res://assets/logodeomissus-removebg-preview.png" id="3_3b2dc"]
 [ext_resource type="Texture2D" uid="uid://d1ar1ke10hla7" path="res://assets/Free Vignette Overlay 24.png" id="3_irlws"]
 [ext_resource type="Texture2D" uid="uid://ccd6et822v1ki" path="res://assets/botaoplay.png" id="4_irlws"]
+[ext_resource type="Texture2D" uid="uid://du1a5r08kk2kv" path="res://assets/2-2-arrow-png-pic.png" id="6_uqo67"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_irlws"]
 lifetime_randomness = 0.75
@@ -97,25 +98,30 @@ fixed_fps = 75
 process_material = SubResource("ParticleProcessMaterial_irlws")
 
 [node name="LogoDeoMissus" type="Sprite2D" parent="." unique_id=1063583086]
-position = Vector2(560, 201.99895)
+position = Vector2(560, 191.99995)
 scale = Vector2(1.0000005, 0.99999577)
 texture = ExtResource("3_3b2dc")
 
 [node name="BotaoPlay" type="Sprite2D" parent="." unique_id=500102086]
-position = Vector2(568, 442)
-scale = Vector2(0.24, 0.225)
+position = Vector2(568, 418)
+scale = Vector2(0.22, 0.2225)
+texture = ExtResource("4_irlws")
+
+[node name="BotaoTutorial" type="Sprite2D" parent="." unique_id=1050738056]
+position = Vector2(568, 514)
+scale = Vector2(0.22, 0.2225)
 texture = ExtResource("4_irlws")
 
 [node name="BotaoCreditos" type="Sprite2D" parent="." unique_id=1633243861]
-position = Vector2(568, 546)
-scale = Vector2(0.24, 0.225)
+position = Vector2(568, 610)
+scale = Vector2(0.22, 0.2225)
 texture = ExtResource("4_irlws")
 
 [node name="Play" type="Button" parent="." unique_id=1448159990]
 offset_left = 472.00003
-offset_top = 384.0
+offset_top = 360.0
 offset_right = 690.48706
-offset_bottom = 437.0
+offset_bottom = 404.0
 scale = Vector2(0.952002, 1)
 theme_override_colors/font_color = Color(0.9784388, 0.97843796, 0.97305936, 1)
 theme_override_colors/font_hover_color = Color(0.42365032, 0.42365074, 0.42365053, 1)
@@ -125,11 +131,24 @@ theme_override_font_sizes/font_size = 26
 text = "JOGAR"
 flat = true
 
+[node name="Comojoga" type="Button" parent="." unique_id=157706820]
+offset_left = 456.00003
+offset_top = 456.0
+offset_right = 708.10034
+offset_bottom = 503.0
+scale = Vector2(0.952002, 1)
+theme_override_colors/font_color = Color(0.9784388, 0.97843796, 0.97305936, 1)
+theme_override_colors/font_hover_color = Color(0.42365032, 0.42365074, 0.42365053, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 26
+text = "TUTORIAL"
+flat = true
+
 [node name="Credits" type="Button" parent="." unique_id=508651393]
 offset_left = 472.00003
-offset_top = 488.0
+offset_top = 552.0
 offset_right = 690.48694
-offset_bottom = 541.0
+offset_bottom = 596.0
 scale = Vector2(0.952002, 1)
 theme_override_colors/font_color = Color(0.9784388, 0.97843796, 0.97305936, 1)
 theme_override_colors/font_hover_color = Color(0.42365032, 0.42365074, 0.42365053, 1)
@@ -154,15 +173,35 @@ flat = true
 
 [node name="Titulo" type="RichTextLabel" parent="." unique_id=1965624365]
 offset_left = 296.0
-offset_top = 241.999
+offset_top = 232.0
 offset_right = 856.0
-offset_bottom = 351.999
+offset_bottom = 342.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 80
 theme_override_font_sizes/bold_italics_font_size = 1
 text = "A DEO MISSUS"
 fit_content = true
 scroll_active = false
+
+[node name="RecomendacaoTexto" type="RichTextLabel" parent="." unique_id=440789288]
+offset_left = 768.0
+offset_top = 464.0
+offset_right = 936.0
+offset_bottom = 495.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 22
+theme_override_font_sizes/bold_italics_font_size = 1
+text = "Recomendado*
+"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RecomendacaoSeta" type="Sprite2D" parent="." unique_id=1214837733]
+position = Vector2(728, 480)
+scale = Vector2(0.05, 0.035)
+texture = ExtResource("6_uqo67")
 
 [node name="Fadein" type="ColorRect" parent="." unique_id=580289821]
 offset_right = 1168.0
@@ -175,5 +214,6 @@ root_node = NodePath("../Fadein")
 libraries/ = SubResource("AnimationLibrary_82pe7")
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Comojoga" to="." method="_on_comojoga_pressed"]
 [connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
