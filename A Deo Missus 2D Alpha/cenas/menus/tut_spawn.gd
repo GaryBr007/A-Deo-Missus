@@ -7,7 +7,9 @@ func _process(_delta: float) -> void:
 		spawninimigo.global_position = global_position
 		spawninimigo.player = Player
 		get_tree().current_scene.add_child(spawninimigo)
-		queue_free()
 		$"../Spawn".play()
 		$"../Kurt".visible = true
 		$"../MenuPrincipal".visible = true
+		
+		queue_free()
+		

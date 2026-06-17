@@ -1,7 +1,7 @@
 extends Area2D
 
 func _process(_delta: float) -> void:
-	if len(Global.itenstut) >= 1:
+	if len(Global.itenstut) >= 1 and visible == false:
 		visible = true
 		monitoring = true
 		monitorable = true

@@ -125,9 +125,11 @@ offset_bottom = 404.0
 scale = Vector2(0.952002, 1)
 theme_override_colors/font_color = Color(0.9784388, 0.97843796, 0.97305936, 1)
 theme_override_colors/font_hover_color = Color(0.42365032, 0.42365074, 0.42365053, 1)
+theme_override_colors/font_disabled_color = Color(0.0122850835, 0.0122850835, 0.0122850835, 0.5019608)
 theme_override_constants/outline_size = 2
 theme_override_constants/icon_max_width = 0
 theme_override_font_sizes/font_size = 26
+disabled = true
 text = "JOGAR"
 flat = true
 
@@ -184,6 +186,7 @@ fit_content = true
 scroll_active = false
 
 [node name="RecomendacaoTexto" type="RichTextLabel" parent="." unique_id=440789288]
+visible = false
 offset_left = 768.0
 offset_top = 464.0
 offset_right = 936.0
@@ -199,6 +202,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="RecomendacaoSeta" type="Sprite2D" parent="." unique_id=1214837733]
+visible = false
 position = Vector2(728, 480)
 scale = Vector2(0.05, 0.035)
 texture = ExtResource("6_uqo67")
