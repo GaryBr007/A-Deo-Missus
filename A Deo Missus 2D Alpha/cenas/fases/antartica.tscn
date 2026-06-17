@@ -167,6 +167,7 @@ volume_db = -10.722
 pitch_scale = 0.97
 
 [node name="Entrada" type="Area2D" parent="." unique_id=145026841 groups=["Player"]]
+visible = false
 position = Vector2(3270, 329)
 collision_layer = 2
 collision_mask = 3
