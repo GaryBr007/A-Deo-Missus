@@ -257,7 +257,7 @@ texture = ExtResource("10_kivau")
 
 [node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="Guitarra" unique_id=759591684]
 stream = ExtResource("10_rg7bt")
-volume_db = -16.624
+volume_db = -9.871
 pitch_scale = 1.02
 autoplay = true
 max_distance = 319.0
