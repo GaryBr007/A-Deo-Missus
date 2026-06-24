@@ -220,7 +220,6 @@ offset_right = 1152.0
 offset_bottom = 648.0
 
 [node name="Fadein" type="ColorRect" parent="." unique_id=1248279512]
-visible = false
 z_index = 4
 offset_left = 2590.0
 offset_right = 4556.0
